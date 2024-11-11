@@ -1,0 +1,15 @@
+Testcode ist sehr wichtig (hat mehrere Bugs erkenntlich gemacht)
+obviously alles zu klasse..
+Habe keine statischen Methoden für die anderen Operationen weil zu faul. Hätte es aber so gemacht, dass die statischen auf die Dynamischen zugreifen (jedoch ohne so viel drüber nachzudenken, die Vor-/Nachteile sind interessant.)
+
+Frage zur Lösung:
+ public void negative(){
+        this.setNumerator(-this.numerator);
+    }
+
+    public void subtract(Fraction f){
+        this.add(negative(f));
+    }
+
+würde dieser Code nicht einen fehler bei substract zurückgeben, weil negative() keinen Rückgabewert hat, sondern f selbst verändert und somit nichts an add gegeben wurde? (gleiches bei divide)
+
